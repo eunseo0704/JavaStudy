@@ -1,14 +1,12 @@
+import java.util.Scanner; // Scanner 클래스를 사용하기 위해 import
+
 public class Main {
     public static void main(String[] args) {
-        int age = 20; // 나이를 나타내는 변수
+        Scanner scanner = new Scanner(System.in); // Scanner 객체 생성
 
-        // 나이에 따라 출력
-        if (age >= 20) {
-            System.out.println("성인입니다.");
-        } else if (age >= 14) {
-            System.out.println("청소년입니다.");
-        } else {
-            System.out.println("어린이입니다.");
-        }
+        System.out.print("이름을 입력하세요: "); // 입력 유도 메시지 출력
+        String name = scanner.nextLine(); // 사용자로부터 문자열 입력받기
+
+        System.out.println("안녕하세요, " + name + "님!"); // 인사 출력
     }
 }
