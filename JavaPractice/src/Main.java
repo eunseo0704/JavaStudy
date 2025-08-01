@@ -1,12 +1,18 @@
-import java.util.Scanner; // Scanner 클래스를 사용하기 위해 import
+import java.util.Scanner; // 사용자로부터 입력을 받기 위한 도구(Scanner)를 가져옴
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in); // Scanner 객체 생성
+        Scanner sc = new Scanner(System.in);
 
-        System.out.print("이름을 입력하세요: "); // 입력 유도 메시지 출력
-        String name = scanner.nextLine(); // 사용자로부터 문자열 입력받기
+        System.out.print("나이를 입력하세요: ");
+        int age = sc.nextInt();
 
-        System.out.println("안녕하세요, " + name + "님!"); // 인사 출력
+        if (age >= 20) {
+            System.out.println("성인입니다!");
+        } else {
+            System.out.println("미성년자입니다!");
+        }
+
+            sc.close();
     }
 }
