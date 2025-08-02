@@ -1,18 +1,18 @@
-import java.util.Scanner; // 사용자로부터 입력을 받기 위한 도구(Scanner)를 가져옴
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.print("나이를 입력하세요: ");
-        int age = sc.nextInt();
+        System.out.print("숫자를 입력하세요: ");
+        int num = scanner.nextInt();
 
-        if (age >= 20) {
-            System.out.println("성인입니다!");
+        if (num == 0) {
+            System.out.println("입력한 숫자는 짝수입니다.");
         } else {
-            System.out.println("미성년자입니다!");
+            System.out.println("입력한 숫자는 홀수입니다.");
         }
 
-            sc.close();
+        scanner.close();
     }
 }
